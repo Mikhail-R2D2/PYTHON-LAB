@@ -1,0 +1,30 @@
+# Задача 5: Калькулятор скидки
+
+# Ввод данных
+price = float(input("Введите цену товара: "))
+quantity = int(input("Введите количество: "))
+
+# Общая стоимость
+total = price * quantity
+
+print("Общая стоимость:", total, "руб")
+
+# Определение скидки
+if total < 1000:
+    discount = 0
+elif total <= 5000:
+    discount = 5
+else:
+    discount = 10
+
+# Расчет скидки
+discount_amount = total * discount / 100
+final_price = total - discount_amount
+
+print("\n=== РАСЧЁТ СКИДКИ ===")
+print("Цена за единицу:", price, "руб")
+print("Количество:", quantity)
+print("Общая сумма:", total, "руб")
+print("Скидка:", discount, "%")
+print("Размер скидки:", discount_amount, "руб")
+print("К оплате:", final_price, "руб")
